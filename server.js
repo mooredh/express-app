@@ -23,14 +23,29 @@ app.use((req, res, next) => {
 })*/
 
 app.get('/', (req, res) => {
-    res.render('home', {
-        pageTitle: 'Home page'
+    res.render("home", {
+        pageTitle: "Home page",
+        classHome: "active",
+        classAbout: "",
+        classProjects: ""
     });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', {
-        pageTitle: 'About page'
+    res.render("about", {
+        pageTitle: "About page",
+        classAbout: "active",
+        classHome: "",
+        classProjects: ""
+    });
+});
+
+app.get("/projects", (req, res) => {
+    res.render("projects", {
+        pageTitle: "Projects page",
+        classProjects: "active",
+        classHome: "",
+        classAbout: ""
     });
 });
 
